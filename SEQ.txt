@@ -1,0 +1,77 @@
+ClrHome
+Lbl 0
+Menu("SEQ (ARITH TERM)","BACK",15,"TN (A D N)",1,"A (TN D N)",2,"D (TN A N)",3,"N (TN A D)",4,"NEXT",5,"EXIT",99)
+Lbl 5
+Menu("SEQ (ARITH SUM)","BACK",0,"SN (A D N)",6,"A (SN D N)",7,"D (SN A N)",8,"N (SN A D)",9,"NEXT",10,"EXIT",99)
+Lbl 10
+Menu("SEQ (GEOM TERM)","BACK",5,"TN (A R N)",11,"A (TN R N)",12,"R (TN A N)",13,"N (TN A R)",14,"NEXT",15,"EXIT",99)
+Lbl 15
+Menu("SEQ (GEOM SUM)","BACK",10,"SN (A R N)",16,"A (SN R N)",17,"R (SN A N)",18,"N (SN A R)",19,"NEXT",0,"EXIT",99)
+Lbl 1
+Prompt A,D,N
+Disp A+(N-1)D
+Stop
+Lbl 2
+Prompt T,D,N
+Disp T-(N-1)D
+Stop
+Lbl 3
+Prompt T,A,N
+Disp (T-A)/(N-1)
+Stop
+Lbl 4
+Prompt T,A,D
+Disp (T-A)/D+1
+
+Stop
+Lbl 6
+Prompt A,D,N
+Disp N/2*(2A+(N-1)D)
+Stop
+Lbl 7
+Prompt S,D,N
+Disp S/N-(N-1)D/2
+Stop
+Lbl 8
+Prompt S,A,N
+Disp (2S/N-2A)/(N-1)
+Stop
+Lbl 9
+Prompt S,A,D
+Disp (√(4A(A-D)+D(D+8S))-2A+D)/2D
+Stop
+
+Lbl 11
+Prompt A,R,N
+Disp AR^(N-1)
+Stop
+Lbl 12
+Prompt T,R,N
+Disp T/(R^(N-1))
+Stop
+Lbl 13
+Prompt T,A,N
+Disp (T/A)^(1/(N-1))
+Stop
+Lbl 14
+Prompt T,A,R
+Disp logBASE(T/A,R)+1
+Stop
+
+Lbl 16
+Prompt A,R,N
+Disp A(R^N-1)/(R-1)
+Stop
+Lbl 17
+Prompt S,R,N
+Disp S*(R-1)/(R^N-1)
+Stop
+Lbl 18
+Prompt S,A,N
+Disp "IDFK"
+Stop
+Lbl 19
+Prompt S,A,R
+Disp logBASE(S/A*(R-1)+1,R)
+Stop
+Lbl 99

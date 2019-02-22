@@ -1,0 +1,87 @@
+ClrHome
+Lbl 0
+Menu("PHYS (1)","BACK",10,"ΔD (V1 ΔT A)",1,"ΔD (V2 ΔT A)",2,"ΔT (V1 ΔD A)",3,"ΔT (V2 ΔD A)",4,"NEXT",5,"EXIT",99)
+Lbl 5
+Menu("PHYS (2)","BACK",0,"A (V1 ΔT ΔD)",6,"A (V2 ΔT ΔD)",7,"V1 (A ΔT ΔD)",8,"V2 (A ΔT ΔD)",9,"NEXT",10,"EXIT",99)
+Lbl 10
+Menu("PHYS (3)","BACK",5,"MX ΔD(V1 ΔD A)",11,"NEXT",0,"EXIT",99)
+"D (V1 ΔT A)"
+Lbl 1
+Input "V1=",V
+Input "ΔT=",T
+Input "A=",A
+Disp VT+(AT²)/2
+VT+(AT²)/2
+Stop
+"D (V2 ΔT Δ)"
+Lbl 2
+Input "V2=",V
+Input "ΔT=",T
+Input "A=",A
+Disp VT-(AT²)/2
+VT-(AT²)/2
+Stop
+"T (V1 ΔD A)"
+Lbl 3
+Input "V1=",V
+Input "ΔD=",D
+Input "A=",A
+Disp (⁻V+√(V²+2AD))/A
+Disp (⁻V-√(V²+2AD))/A
+{(⁻V+√(V²+2AD))/A,(⁻V-√(V²+2AD))/A}
+Stop
+"T (V2 ΔD A)"
+Lbl 4
+Input "V2=",V
+Input "ΔD=",D
+Input "A=",A
+Disp (⁻V+√(V²-2AD))/A
+Disp (⁻V-√(V²-2AD))/A
+{(⁻V+√(V²-2AD))/A,(⁻V-√(V²-2AD))/A}
+Stop
+
+"A (V1 ΔT ΔD)"
+Lbl 6
+Input "V1=",V
+Input "ΔT=",T
+Input "ΔD=",D
+Disp 2(D-VT)/(T²)
+2(D-VT)/(T²)
+Stop
+"A (V2 ΔT ΔD)"
+Lbl 7
+Input "V2=",V
+Input "ΔT=",T
+Input "ΔD=",D
+Disp -2(D-VT)/(T²)
+-2(D-VT)/(T²)
+Stop
+"V1 (A ΔT ΔD)"
+Lbl 8
+Input "A=",A
+Input "ΔT=",T
+Input "ΔD=",D
+Disp D/T-AT/2
+D/T-AT/2
+Stop
+"V2 (A ΔT ΔD)"
+Lbl 9
+Input "A=",A
+Input "ΔT=",T
+Input "ΔD=",D
+Disp D/T+AT/2
+D/T+AT/2
+Stop
+
+"MAX ΔD (V1 ΔD A)"
+Lbl 11
+Input "V1=",V
+Input "ΔD (END)=",D
+Input "A=",A
+"PROBABLY BROKEN WHEN A<0"
+{(⁻V+√(V²+2AD))/A,(⁻V-√(V²+2AD))/A}
+(Ans(1)+Ans(2))/2
+VAns+(AAns²)/2
+Disp Ans
+Stop
+Lbl 99
