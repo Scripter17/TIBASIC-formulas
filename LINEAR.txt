@@ -1,0 +1,128 @@
+ClrHome
+Lbl 0
+Menu("LINEAR (SYS)","BACK",15,"STANDARD",1,"POINT-SLOPE",2,"SLOPE-INTER",3,"NEXT",5,"EXIT",99)
+Lbl 5
+Menu("LINEAR (\->STD)","BACK",0,"POINT-SLOPE",6,"SLOPE-INTER",7,"NEXT",10,"EXIT",99)
+Lbl 10
+Menu("LINEAR (\->PSF)","BACK",5,"STANDARD",11,"SLOPE-INTER",12,"NEXT",15,"EXIT",99)
+Lbl 15
+Menu("LINEAR (\->SIF)","BACK",10,"STANDARD",16,"POINT-SLOPE",17,"NEXT",20,"EXIT",99)
+Lbl 20
+Menu("LINEAR (XY-INTS)","BACK",15,"STANDARD",21,"POINT-SLOPE",22,"SLOPE-INTER",23,"NEXT",0,"EXIT",99)
+
+Lbl 1
+Input "A=",A
+Input "B=",B
+Input "C=",C
+Input "D=",D
+Input "E=",E
+Input "F=",F
+{(CE-BF)/(BD-AE),(CD-AF)/(AE-BD)}
+Disp Ans(1)
+Disp Ans(2)
+Stop
+Lbl 2
+Input "M1=",A
+Input "X1=",B
+Input "Y1=",C
+Input "M1=",D
+Input "X1=",E
+Input "Y1=",F
+(F-C+AB-CD)/(A-D)
+{Ans,A(Ans-B)+C}
+Disp Ans(1)
+Disp Ans(2)
+Stop
+Lbl 3
+Input "M1=",A
+Input "B1=",B
+Input "M2=",C
+Input "B2=",D
+(D-B)/(A-C)
+{Ans,AAns+B}
+Disp Ans(1)
+Disp Ans(2)
+Stop
+
+Lbl 6
+Input "M=",A
+Input "PX=",B
+Input "PY=",C
+{A,⁻1,C-AB}
+Disp "0=AX+BY+C"
+Disp Ans(1)
+Disp Ans(2)
+Disp Ans(3)
+Stop
+Lbl 7
+Input "M=",A
+Input "B=",B
+{A,⁻1,B}
+Disp "0=AX+BY+C"
+Disp Ans(1)
+Disp Ans(2)
+Disp Ans(3)
+Stop
+
+Lbl 11
+Input "A=",A
+Input "B=",B
+Input "C=",C
+{A/⁻B,0,C/⁻B}
+Disp "Y=M(X-PX)+PY"
+Disp Ans(1)
+Disp Ans(2)
+Disp Ans(3)
+Stop
+Lbl 12
+Input "M=",A
+Input "B=",B
+{A,0,B}
+Disp "Y=M(X-PX)+PY"
+Disp Ans(1)
+Disp Ans(2)
+Disp Ans(3)
+Stop
+
+Lbl 16
+Input "A=",A
+Input "B=",B
+Input "C=",C
+{A/⁻B,C/⁻B}
+Disp "Y=MX+B"
+Disp Ans(1)
+Disp Ans(2)
+Lbl 17
+Input "M=",A
+Input "PX=",B
+Input "PY=",C
+{A,C-AB}
+Disp "Y=MX+B"
+Disp Ans(1)
+Disp Ans(2)
+Stop
+
+Lbl 21
+Input "A=",A
+Input "B=",B
+Input "C=",C
+{⁻C/B,⁻C/A}
+Disp Ans(1)
+Disp Ans(2)
+Stop
+Lbl 22
+Input "M=",A
+Input "PX=",B
+Input "PY=",C
+{⁻C/A+B,⁻AB+C}
+Disp Ans(1)
+Disp Ans(2)
+Stop
+Lbl 23
+Input "M=",A
+Input "B=",B
+{⁻B/A,B}
+Disp Ans(1)
+Disp Ans(2)
+Stop
+Lbl 99

@@ -10,34 +10,34 @@ Lbl 1
 Input "V1=",V
 Input "ΔT=",T
 Input "A=",A
-Disp VT+(AT²)/2
 VT+(AT²)/2
+Disp Ans
 Stop
 "D (V2 ΔT Δ)"
 Lbl 2
 Input "V2=",V
 Input "ΔT=",T
 Input "A=",A
-Disp VT-(AT²)/2
 VT-(AT²)/2
+Disp Ans
 Stop
 "T (V1 ΔD A)"
 Lbl 3
 Input "V1=",V
 Input "ΔD=",D
 Input "A=",A
-Disp (⁻V+√(V²+2AD))/A
-Disp (⁻V-√(V²+2AD))/A
 {(⁻V+√(V²+2AD))/A,(⁻V-√(V²+2AD))/A}
+Disp Ans(1)
+Disp Ans(2)
 Stop
 "T (V2 ΔD A)"
 Lbl 4
 Input "V2=",V
 Input "ΔD=",D
 Input "A=",A
-Disp (⁻V+√(V²-2AD))/A
-Disp (⁻V-√(V²-2AD))/A
 {(⁻V+√(V²-2AD))/A,(⁻V-√(V²-2AD))/A}
+Disp Ans(1)
+Disp Ans(2)
 Stop
 
 "A (V1 ΔT ΔD)"
@@ -45,32 +45,32 @@ Lbl 6
 Input "V1=",V
 Input "ΔT=",T
 Input "ΔD=",D
-Disp 2(D-VT)/(T²)
 2(D-VT)/(T²)
+Disp Ans
 Stop
 "A (V2 ΔT ΔD)"
 Lbl 7
 Input "V2=",V
 Input "ΔT=",T
 Input "ΔD=",D
-Disp -2(D-VT)/(T²)
 -2(D-VT)/(T²)
+Disp Ans
 Stop
 "V1 (A ΔT ΔD)"
 Lbl 8
 Input "A=",A
 Input "ΔT=",T
 Input "ΔD=",D
-Disp D/T-AT/2
 D/T-AT/2
+Disp Ans
 Stop
 "V2 (A ΔT ΔD)"
 Lbl 9
 Input "A=",A
 Input "ΔT=",T
 Input "ΔD=",D
-Disp D/T+AT/2
 D/T+AT/2
+Disp Ans
 Stop
 
 "MAX ΔD (V1 ΔD A)"

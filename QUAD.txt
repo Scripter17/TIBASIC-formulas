@@ -1,0 +1,44 @@
+ClrHome
+Lbl 0
+Menu("QUAD (STD)","BACK",5,"SOLVE",1,"TO VERTEX",2,"NEXT",5,"EXIT",99)
+Lbl 5
+Menu("QUAD (VERTEX)","BACK",0,"SOLVE",6,"TO STD",7,"NEXT",0,"EXIT",99)
+Lbl 1
+Input "A=",A
+Input "B=",B
+Input "C=",C
+√(B²-4AC)
+{(-B+Ans)/(2A),(-B-Ans)/(2A)}
+Disp Ans(1)
+Disp Ans(2)
+Stop
+Lbl 2
+Input "A=",A
+Input "B=",B
+Input "C=",C
+{A,⁻B/(2A),⁻B²/(4A)+C}
+Disp "Y=A(X-H)²+K"
+Disp Ans(1)
+Disp Ans(2)
+Disp Ans(3)
+Stop
+
+Lbl 6
+Input "A=",A
+Input "H=",B
+Input "K=",C
+√((2AB)²-4A(AB²+C))
+{(2AB+Ans)/(2A),(2AB-Ans)/(2A)}
+Disp Ans(1)
+Disp Ans(2)
+Stop
+Lbl 7
+Input "A=",A
+Input "H=",B
+Input "K=",C
+{A,⁻2AB,AB²+C}
+Disp "Y=AX²+BX+C"
+Disp Ans(1)
+Disp Ans(2)
+Disp Ans(3)
+Lbl 99

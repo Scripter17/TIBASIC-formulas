@@ -8,9 +8,9 @@ Everything in here is released under the ["Don't Be a Dick"](https://dbad-licens
 
 ***
 
-Note: Every program, when done calculating, will have the result put into the `Ans` variable. This is to avoid overwriting anything.  
-***However***, inputted variables *are* overwritten. So if you input 5 for ΔT, then T will be set to 5.  
-Sub-note: 
+#### Note: Every program, when done calculating, will have the result put into the `Ans` variable. This is to avoid overwriting anything.<br/>***However***, inputted variables *are* overwritten. So if you input 5 for ΔT, then T will be set to 5.
+
+#### Note 2: There is a non-zero chance that some of the formulas in these programs are incorrect. I take no responsibility for points lost on tests from using these programs. Nor do I take responsibility if your teacher catches you using these and counts it as cheating.
 
 ***
 
@@ -62,3 +62,31 @@ Calculator for lenses. (Focus, magnification, image/object distance, etc.)
 - Calculate F, DI, and DO given the other two
 - Calculate M, HI, and HO given the other two
 - Calculate M, DI, and DO given the other two
+
+## LINEAR.8xp
+
+Program for solving/converting standard, point-slope, and point-intersect form lines/linear systems
+
+### Variables
+
+- Since there's a lot of 'em and I'm lazy, just remember that the first var you input is set to A, the second to B, etc..
+
+### Formulas
+
+- Solve standard, point-slope, and point-intercept linear systems (find where two lines intersect)
+- Convert standard, point-slope, and point-intercept line equations into either of the other two
+
+## QUAD.8xp
+
+Program for solving standard/vertex forms and converting one into the other
+
+### Variables
+
+- Same as above, the first number you input is A, then B, etc..
+
+### Formulas
+
+- Find the roots of a standard form parabola
+- Convert a standard parabola into vertex form
+- Find the roots of a vertex form parabola
+- Convert a vertex parabola into standard form
