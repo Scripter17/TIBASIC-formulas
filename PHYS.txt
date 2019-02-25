@@ -1,10 +1,13 @@
+"V1 V2 ΔT ΔD A
 ClrHome
 Lbl 0
 Menu("PHYS (1)","BACK",10,"ΔD (V1 ΔT A)",1,"ΔD (V2 ΔT A)",2,"ΔT (V1 ΔD A)",3,"ΔT (V2 ΔD A)",4,"NEXT",5,"EXIT",99)
 Lbl 5
-Menu("PHYS (2)","BACK",0,"A (V1 ΔT ΔD)",6,"A (V2 ΔT ΔD)",7,"V1 (A ΔT ΔD)",8,"V2 (A ΔT ΔD)",9,"NEXT",10,"EXIT",99)
+Menu("PHYS (2)","BACK",0,"A (V1 ΔT ΔD)",6,"A (V2 ΔT ΔD)",7,"V1 (ΔT ΔD A)",8,"V2 (ΔT ΔD A)",9,"NEXT",10,"EXIT",99)
 Lbl 10
-Menu("PHYS (3)","BACK",5,"MX ΔD(V1 ΔD A)",11,"NEXT",0,"EXIT",99)
+Menu("PHYS (3)","BACK",5,"V1 (V2 ΔT A)",11,"V2 (V1 ΔT A)",12,"ΔT (V1 V2 A)",13,"ΔD (V1 V2 A)",14,"NEXT",15,"EXIT",99)
+Lbl 15
+Menu("PHYS (4)","BACK",10,"MX ΔD(V1 ΔD A)",11,"NEXT",0,"EXIT",99)
 "D (V1 ΔT A)"
 Lbl 1
 Input "V1=",V
@@ -56,25 +59,63 @@ Input "ΔD=",D
 -2(D-VT)/(T²)
 Disp Ans
 Stop
-"V1 (A ΔT ΔD)"
+"V1 (ΔT ΔD A)"
 Lbl 8
-Input "A=",A
 Input "ΔT=",T
 Input "ΔD=",D
+Input "A=",A
 D/T-AT/2
 Disp Ans
 Stop
-"V2 (A ΔT ΔD)"
+"V2 (ΔT ΔD A)"
 Lbl 9
-Input "A=",A
 Input "ΔT=",T
 Input "ΔD=",D
+Input "A=",A
 D/T+AT/2
 Disp Ans
 Stop
 
-"MAX ΔD (V1 ΔD A)"
+"V1 (V2 ΔT A)"
 Lbl 11
+Input "V2=",V
+Input "ΔT=",T
+Input "A=",A
+" ΔD (V2 ΔT A) + V1 (ΔT ΔD A)
+VT-(AT²)/2
+Ans/T-AT/2
+Disp Ans
+Stop
+"V2 (V1 ΔT A)"
+Lbl 12
+Input "V1=",V
+Input "ΔT=",T
+Input "A=",A
+" ΔD (V1 ΔT A) + V2 (ΔT ΔD A)
+VT+(AT²)/2
+Ans/T+AT/2
+Disp Ans
+Stop
+"ΔT (V1 V2 A)"
+Lbl 13
+Input "V1=",V
+Input "V2=",W
+Input "A=",A
+(W-V)/A
+Disp Ans
+Stop
+"ΔD (V1 V2 A)"
+Lbl 14
+Input "V1=",V
+Input "V2=",W
+Input "A=",A
+(W-V)/A
+VAns+(AAns²)/2
+Disp Ans
+Stop
+
+"MAX ΔD (V1 ΔD A)"
+Lbl 16
 Input "V1=",V
 Input "ΔD (END)=",D
 Input "A=",A
