@@ -48,58 +48,52 @@ Lbl 6
 Input "M=",A
 Input "PX=",B
 Input "PY=",C
-{A,⁻1,C-AB}
 Disp "0=AX+BY+C"
-Disp Ans(1)
-Disp Ans(2)
-Disp Ans(3)
+Disp A
+Disp ⁻1
+Disp C-AB
 Stop
 Lbl 7
 Input "M=",A
 Input "B=",B
-{A,⁻1,B}
 Disp "0=AX+BY+C"
-Disp Ans(1)
-Disp Ans(2)
-Disp Ans(3)
+Disp A
+Disp ⁻1
+Disp B
 Stop
 
 Lbl 11
 Input "A=",A
 Input "B=",B
 Input "C=",C
-{A/⁻B,0,C/⁻B}
 Disp "Y=M(X-PX)+PY"
-Disp Ans(1)
-Disp Ans(2)
-Disp Ans(3)
+Disp A/⁻B
+Disp 0
+Disp C/⁻B
 Stop
 Lbl 12
 Input "M=",A
 Input "B=",B
-{A,0,B}
 Disp "Y=M(X-PX)+PY"
-Disp Ans(1)
-Disp Ans(2)
-Disp Ans(3)
+Disp A
+Disp 0
+Disp B
 Stop
 
 Lbl 16
 Input "A=",A
 Input "B=",B
 Input "C=",C
-{A/⁻B,C/⁻B}
 Disp "Y=MX+B"
-Disp Ans(1)
-Disp Ans(2)
+Disp A/⁻B
+Disp C/⁻B
 Lbl 17
 Input "M=",A
 Input "PX=",B
 Input "PY=",C
-{A,C-AB}
 Disp "Y=MX+B"
-Disp Ans(1)
-Disp Ans(2)
+Disp A
+Disp C-AB
 Stop
 
 Lbl 21

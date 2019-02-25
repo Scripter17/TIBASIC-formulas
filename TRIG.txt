@@ -1,0 +1,99 @@
+ClrHome
+Lbl 0
+Menu("TRIG (1)","BACK",10,"C (A B θC)",1,"θC (A B C)",2,"B (θA θB A)",3,"θB (θA A B)",4,"NEXT",5,"EXIT",99)
+Lbl 5
+Menu("TRIG (2)","BACK",0,"AREA (A B C)",6,"AREA (A B θC)",7,"AREA (A θB θC)",8,"NEXT",10,"EXIT",99)
+Lbl 10
+Menu("TRIG (3)","BACK",5,"PER. (A B C)",11,"PER. (A B θC)",12,"PER. (A θB θC)",13,"NEXT",0,"EXIT",99)
+
+"C (A B θC)"
+Lbl 1
+Input "A=",A
+Input "B=",B
+Input "θC=",F
+√(A²+B²-2ABcos(F))
+Disp Ans
+Stop
+"θ (A B C)"
+Lbl 2
+Input "A=",A
+Input "B=",B
+Input "C=",C
+cos⁻¹((C²-A²-B²)/(-2AB))
+Disp Ans
+Stop
+"B (θA θB A)"
+Lbl 3
+Input "θA=",D
+Input "θB=",E
+Input "A=",A
+C/sin(A)*sin(B)
+Disp Ans
+Stop
+"θB (θA A B)"
+Lbl 4
+Input "θA=",D
+Input "A=",A
+Input "B=",B
+sin⁻¹(sin(θ)/A*B)
+Disp Ans
+Stop
+
+"AREA (A B C)"
+Lbl 6
+Input "A=",A
+Input "B=",B
+Input "C=",C
+"θC\->Ans"
+cos⁻¹((C²-A²-B²)/(-2AB))
+sin(Ans)AB/2
+Disp Ans
+Stop
+"AREA (A B θC)"
+Lbl 7
+Input "A=",A
+Input "B=",B
+Input "θC=",F
+sin(F)AB/2
+Disp Ans
+Stop
+"AREA (A θB θC)"
+Lbl 8
+Input "A=",A
+Input "θB=",E
+Input "θC=",F
+"θA\->Ans + B\->Ans"
+180-E-F
+A/sin(Ans)*sin(E)
+sin(F)AAns/2
+Disp Ans
+Stop
+
+"PER. (A B C) (INCLUDED FOR COMPLETENESS)"
+Lbl 11
+Input "A=",A
+Input "B=",B
+Input "θC=",F
+A+B+C
+Disp Ans
+Stop
+"PER. (A B θC)"
+Lbl 12
+Input "A=",A
+Input "B=",B
+Input "θC=",F
+A+B+√(A²+B²-2ABcos(F))
+Disp Ans
+Stop
+"PER. (A θB θC)"
+Lbl 13
+Input "A=",A
+Input "θB=",E
+Input "θC=",F
+"θA\->Ans + B\->Ans"
+180-E-F
+A/sin(Ans)*sin(E)
+A+Ans+√(A²+Ans²-2AAnscos(F))
+Disp Ans
+Stop
+Lbl 99

@@ -100,6 +100,21 @@ Program for solving standard/vertex forms and converting one into the other
 - Find the roots of a vertex form parabola
 - Convert a vertex parabola into standard form
 
+## TRIG.8xp
+
+Calculator for sine law and cosine law
+
+### Variables
+
+- A (A)=Side A
+- B (B)=Side B
+- C (C)=Side C
+- &theta;A (D)=angle opposite of A
+- &theta;B (E)=angle opposite of B
+- &theta;C (F)=angle opposite of C
+
+Note: For things like `AREA (A B θC)`, which side is which doesn't matter, so long as θC is the angle between A and B in the triangle. You could input C, A, and θB and it'd still give the correct answer
+
 ***
 
 **Footnotes**

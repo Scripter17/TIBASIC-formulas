@@ -1,3 +1,5 @@
+"1/F=1/DO+1/DI
+"M=HI/HO=⁻I/DO
 ClrHome
 Lbl 0
 Menu("LENS (1)","BACK",5,"F (DO DI)",1,"DI (F DO)",2,"DO (F DI)",3,"HO (M HI)",4,"NEXT",15,"EXIT",99)
@@ -5,14 +7,7 @@ Lbl 5
 Menu("LENS (2)","BACK",0,"HI (M HO)",6,"DO (M DI)",7,"DI (M DO)",8,"M (HI HO)",9,"NEXT",10,"EXIT",99)
 Lbl 10
 Menu("LENS (3)","BACK",5,"M (DI DO)",11,"NEXT",0,"EXIT",99)
-Lbl 50
-Disp "F=FOCUS LEN"
-Disp "M=MAGNIFICATION"
-Disp "DI/O=IM/OBJ DIST"
-Disp "HI/O=IM/OBJ HIGH"
-Disp "F=(DIˉ¹ + DOˉ¹)ˉ¹
-Disp "M=HI/HO=⁻DI/DO
-Stop
+
 Lbl 1
 Input "DO:",O
 Input "DI:",I

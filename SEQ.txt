@@ -7,69 +7,86 @@ Lbl 10
 Menu("SEQ (GEOM TERM)","BACK",5,"TN (A R N)",11,"A (TN R N)",12,"R (TN A N)",13,"N (TN A R)",14,"NEXT",15,"EXIT",99)
 Lbl 15
 Menu("SEQ (GEOM SUM)","BACK",10,"SN (A R N)",16,"A (SN R N)",17,"R (SN A N)",18,"N (SN A R)",19,"NEXT",0,"EXIT",99)
+
+"TN (A D N)"
 Lbl 1
 Prompt A,D,N
 Disp A+(N-1)D
 Stop
+"A (TN D N)"
 Lbl 2
 Prompt T,D,N
 Disp T-(N-1)D
 Stop
+"D (TN A N)"
 Lbl 3
 Prompt T,A,N
 Disp (T-A)/(N-1)
 Stop
+"N (TN A D)"
 Lbl 4
 Prompt T,A,D
 Disp (T-A)/D+1
-
 Stop
+
+"SN (A D N)"
 Lbl 6
 Prompt A,D,N
 Disp N/2*(2A+(N-1)D)
 Stop
+"A (SN D N)"
 Lbl 7
 Prompt S,D,N
 Disp S/N-(N-1)D/2
 Stop
+"D (SN A N)"
 Lbl 8
 Prompt S,A,N
 Disp (2S/N-2A)/(N-1)
 Stop
+"N (SN A D)"
 Lbl 9
 Prompt S,A,D
 Disp (√(4A(A-D)+D(D+8S))-2A+D)/2D
 Stop
 
+"TN (A R N)"
 Lbl 11
 Prompt A,R,N
 Disp AR^(N-1)
 Stop
+"A (TN R N)"
 Lbl 12
 Prompt T,R,N
 Disp T/(R^(N-1))
 Stop
+"R (TN A N)"
 Lbl 13
 Prompt T,A,N
 Disp (T/A)^(1/(N-1))
 Stop
+"N (TN A R)"
 Lbl 14
 Prompt T,A,R
 Disp logBASE(T/A,R)+1
 Stop
 
+"SN (A R N)"
 Lbl 16
 Prompt A,R,N
 Disp A(R^N-1)/(R-1)
 Stop
+"A (SN R N)"
 Lbl 17
 Prompt S,R,N
 Disp S*(R-1)/(R^N-1)
 Stop
+"R (SN A N)"
 Lbl 18
 Prompt S,A,N
 Disp "IDFK"
 Stop
+"N (SN A R)"
 Lbl 19
 Prompt S,A,R
 Disp logBASE(S/A*(R-1)+1,R)
