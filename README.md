@@ -26,7 +26,7 @@ Calculator for velocities, acceleration, etc..
 
 ### Variables
 - V1 (V)=Start velocity
-- V2 (V^[When both V1 and V2 are used, V2 is set to W])=End velocity
+- V2 (V[1])=End velocity
 - &Delta;T (T)=Change in time
 - &Delta;D (D)=Change in distance/height above ground
 - A (A)=Acceleration
@@ -99,3 +99,9 @@ Program for solving standard/vertex forms and converting one into the other
 - Convert a standard parabola into vertex form
 - Find the roots of a vertex form parabola
 - Convert a vertex parabola into standard form
+
+***
+
+**Footnotes**
+
+[1]: When both V1 and V2 are used, V2 is set to W
