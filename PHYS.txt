@@ -1,26 +1,34 @@
-"V1 V2 ΔT ΔD A
+"V1 V2 ΔD ΔT A
 ClrHome
 Lbl 0
-Menu("PHYS (1)","BACK",10,"ΔD (V1 ΔT A)",1,"ΔD (V2 ΔT A)",2,"ΔT (V1 ΔD A)",3,"ΔT (V2 ΔD A)",4,"NEXT",5,"EXIT",99)
+Menu("PHYS (1)","BACK",30,"V1 (ΔD ΔT A)",1,"ΔD (V1 ΔT A)",2,"ΔT (V1 ΔD A)",3,"A (V1 ΔD ΔT)",4,"NEXT",5,"EXIT",99)
 Lbl 5
-Menu("PHYS (2)","BACK",0,"A (V1 ΔT ΔD)",6,"A (V2 ΔT ΔD)",7,"V1 (ΔT ΔD A)",8,"V2 (ΔT ΔD A)",9,"NEXT",10,"EXIT",99)
+Menu("PHYS (2)","BACK",0,"V2 (ΔD ΔT A)",6,"ΔD (V2 ΔT A)",7,"ΔT (V2 ΔD A)",8,"A (V2 ΔD ΔT)",9,"NEXT",10,"EXIT",99)
 Lbl 10
-Menu("PHYS (3)","BACK",5,"MX ΔD(V1 ΔD A)",11,"V1 (V2 ΔT A)",12,"V2 (V1 ΔT A)",13,"NEXT",0,"EXIT",99)
+Menu("PHYS (3)","BACK",5,"V1 (ΔD ΔT A)",4,"V1 (V2 ΔD A)",12,"V1 (V2 ΔT ΔA)",13,"V1 (V2 ΔD ΔT)",14,"NEXT",15,"EXIT",99)
+Lbl 15
+Menu("PHYS (4)","BACK",10,"V2 (ΔD ΔT A)",9,"V2 (V1 ΔD A)",17,"V2 (V1 ΔT ΔA)",18,"V2 (V1 ΔD ΔT)",19,"NEXT",20,"EXIT",99)
+Lbl 20
+Menu("PHYS (5)","BACK",15,"MX ΔD(V1 ΔD A)",21,"NEXT",25,"EXIT",99)
+Lbl 25
+Menu("PHYS (6)","BACK",20,"ΔS (μK G)",26,"μK (ΔS G)",27,"G (ΔS μK)",28,"ΔS (μK M F G)",29,"NEXT",30,"EXIT",99)
+Lbl 30
+Menu("PHYS (7)","BACK",25,"M (F μS G)",31,"F (M μS G)",32,"μS (M F G)",33,"G (M F μS)",34,"NEXT",0,"EXIT",99)
 
-"D (V1 ΔT A)"
+"V1 (ΔD ΔT A)"
 Lbl 1
+Input "ΔD=",D
+Input "ΔT=",T
+Input "A=",A
+D/T-AT/2
+Disp Ans
+Stop
+"D (V1 ΔT A)"
+Lbl 2
 Input "V1=",V
 Input "ΔT=",T
 Input "A=",A
 VT+(AT²)/2
-Disp Ans
-Stop
-"D (V2 ΔT Δ)"
-Lbl 2
-Input "V2=",V
-Input "ΔT=",T
-Input "A=",A
-VT-(AT²)/2
 Disp Ans
 Stop
 "T (V1 ΔD A)"
@@ -32,8 +40,33 @@ Input "A=",A
 Disp Ans(1)
 Disp Ans(2)
 Stop
-"T (V2 ΔD A)"
+"A (V1 ΔD ΔT)"
 Lbl 4
+Input "V1=",V
+Input "ΔD=",D
+Input "ΔT=",T
+2(D-VT)/(T²)
+Disp Ans
+Stop
+
+"V2 (ΔD ΔT A)"
+Lbl 6
+Input "ΔD=",D
+Input "ΔT=",T
+Input "A=",A
+D/T+AT/2
+Disp Ans
+Stop
+"D (V2 ΔT Δ)"
+Lbl 7
+Input "V2=",V
+Input "ΔT=",T
+Input "A=",A
+VT-(AT²)/2
+Disp Ans
+Stop
+"T (V2 ΔD A)"
+Lbl 8
 Input "V2=",V
 Input "ΔD=",D
 Input "A=",A
@@ -41,51 +74,15 @@ Input "A=",A
 Disp Ans(1)
 Disp Ans(2)
 Stop
-
-"A (V1 ΔT ΔD)"
-Lbl 6
-Input "V1=",V
-Input "ΔT=",T
-Input "ΔD=",D
-2(D-VT)/(T²)
-Disp Ans
-Stop
-"A (V2 ΔT ΔD)"
-Lbl 7
-Input "V2=",V
-Input "ΔT=",T
-Input "ΔD=",D
--2(D-VT)/(T²)
-Disp Ans
-Stop
-"V1 (ΔT ΔD A)"
-Lbl 8
-Input "ΔT=",T
-Input "ΔD=",D
-Input "A=",A
-D/T-AT/2
-Disp Ans
-Stop
-"V2 (ΔT ΔD A)"
+"A (V2 ΔD ΔT)"
 Lbl 9
-Input "ΔT=",T
+Input "V2=",V
 Input "ΔD=",D
-Input "A=",A
-D/T+AT/2
+Input "ΔT=",T
+⁻2(D-VT)/(T²)
 Disp Ans
 Stop
 
-"MAX ΔD (V1 ΔD A)"
-Lbl 11
-Input "V1=",V
-Input "ΔD (END)=",D
-Input "A=",A
-"PROBABLY BROKEN WHEN A<0"
-{(⁻V+√(V²+2AD))/A,(⁻V-√(V²+2AD))/A}
-(Ans(1)+Ans(2))/2
-VAns+(AAns²)/2
-Disp Ans
-Stop
 "V1 (V2 ΔT A)"
 Lbl 12
 Input "V2=",V
@@ -95,8 +92,28 @@ VT-(AT²)/2
 Ans/T-AT/2
 Disp Ans
 Stop
-"V2 (V1 ΔT A)"
+"V1 (V2 ΔD A)"
 Lbl 13
+Input "V2=",V
+Input "ΔD=",D
+Input "A=",A
+{(⁻V+√(V²-2AD))/A,(⁻V-√(V²-2AD))/A}
+D/Ans-AAns/2
+Disp Ans(1)
+Disp Ans(2)
+Stop
+"V1 (V2 ΔD ΔT)"
+Lbl 14
+Input "V2=",V
+Input "ΔD=",D
+Input "ΔT=",T
+⁻2(D-VT)/(T²)
+D/T-AnsT/2
+Disp Ans
+Stop
+
+"V2 (V1 ΔT A)"
+Lbl 17
 Input "V1=",V
 Input "ΔT=",T
 Input "A=",A
@@ -104,4 +121,99 @@ VT+(AT²)/2
 Ans/T+AT/2
 Disp Ans
 Stop
+"V2 (V1 ΔD A)"
+Lbl 18
+Input "V1=",V
+Input "ΔD=",D
+Input "A=",A
+{(⁻V+√(V²-2AD))/A,(⁻V-√(V²-2AD))/A}
+D/Ans+AAns/2
+Disp Ans(1)
+Disp Ans(2)
+Stop
+"V2 (V1 ΔD ΔT)"
+Lbl 19
+Input "V1=",V
+Input "ΔD=",D
+Input "ΔT=",T
+2(D-VT)/(T²)
+D/T+AnsT/2
+Disp Ans
+Stop
+
+"MAX ΔD (V1 ΔD A)"
+Lbl 21
+Input "V1=",V
+Input "ΔD (END)=",D
+Input "A=",A
+"PROBABLY BROKEN WHEN A<0"
+{(⁻V+√(V²+2AD))/A,(⁻V-√(V²+2AD))/A}
+(Ans(1)+Ans(2))/2
+VAns+(AAns²)/2
+Disp Ans
+Stop
+
+"ΔS (μK G)"
+Lbl 26
+Input "μK=",K
+Input "G=",G
+⁻KG
+Disp Ans
+Stop
+"μK (ΔS G)"
+Lbl 27
+Input "ΔS=",S
+Input "G=",G
+⁻SG
+Disp Ans
+Stop
+"G (ΔS μK)"
+Lbl 28
+Input "ΔS=",S
+Input "μK=",K
+⁻SK
+Disp Ans
+Stop
+"ΔS (μK M F G)"
+Lbl 29
+Input "μK=",K
+Input "M=",M
+Input "F=",F
+Input "G=",G
+KG+F/M
+Disp Ans
+Stop
+"M (F μS G)"
+Lbl 31
+Input "F=",F
+Input "μS=",S
+Input "G=",G
+F/(⁻SG)
+Disp Ans
+Stop
+"F (M μS G)"
+Lbl 32
+Input "M=",M
+Input "μS=",S
+Input "G=",G
+⁻SMG
+Disp Ans
+Stop
+"μS (M F G)"
+Lbl 33
+Input "M=",M
+Input "F=",F
+Input "G=",G
+F/(⁻MG)
+Disp Ans
+Stop
+"G (M F μS)"
+Lbl 34
+Input "M=",M
+Input "F=",F
+Input "μS=",S
+F/(⁻MS)
+Disp Ans
+Stop
+
 Lbl 99

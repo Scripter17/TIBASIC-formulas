@@ -1,11 +1,16 @@
 ClrHome
 Lbl 0
-Menu("TRIG (1)","BACK",10,"C (A B θC)",1,"θC (A B C)",2,"B (θA θB A)",3,"θB (θA A B)",4,"NEXT",5,"EXIT",99)
+Menu("TRIG (1)","BACK",25,"C (A B θC)",1,"θC (A B C)",2,"θB (θA A B)",3,"B (θA θB A)",4,"NEXT",5,"EXIT",99)
 Lbl 5
-Menu("TRIG (2)","BACK",0,"AREA (A B C)",6,"AREA (A B θC)",7,"AREA (A θB θC)",8,"NEXT",10,"EXIT",99)
+Menu("TRIG (2)","BACK",0,"AREA (A B C)",6,"AREA (A B θC)",7,"AREA (A θB θC)",8,"AREA (A θA θC)",9,"NEXT",10,"EXIT",99)
 Lbl 10
-Menu("TRIG (3)","BACK",5,"PER. (A B C)",11,"PER. (A B θC)",12,"PER. (A θB θC)",13,"NEXT",0,"EXIT",99)
-
+Menu("TRIG (3)","BACK",5,"PER. (A B C)",11,"PER. (A B θC)",12,"PER. (A θB θC)",13,"PER. (A θA θC)",14,"NEXT",15,"EXIT",99)
+Lbl 15
+Menu("TRIG (4)","BACK",10,"sin(A+Bi)",16,"cos(A+Bi)",17,"tan(A+Bi)",18,"NEXT",20,"EXIT",99)
+Lbl 20
+Menu("TRIG (5)","BACK",15,"sin⁻¹(A+Bi)",21,"cos⁻¹(A+Bi)",22,"tan⁻¹(A+Bi)",23,"NEXT",25,"EXIT",99)
+Lbl 25
+Menu("TRIG (6)","BACK",20,"θB (PA PB PC)",26,"NEXT",0,"EXIT",99)
 "C (A B θC)"
 Lbl 1
 Input "A=",A
@@ -19,23 +24,23 @@ Lbl 2
 Input "A=",A
 Input "B=",B
 Input "C=",C
-cos⁻¹((C²-A²-B²)/(-2AB))
-Disp Ans
-Stop
-"B (θA θB A)"
-Lbl 3
-Input "θA=",D
-Input "θB=",E
-Input "A=",A
-C/sin(A)*sin(B)
+cos⁻¹((C²-A²-B²)/(⁻2AB))
 Disp Ans
 Stop
 "θB (θA A B)"
-Lbl 4
+Lbl 3
 Input "θA=",D
 Input "A=",A
 Input "B=",B
 sin⁻¹(sin(θ)/A*B)
+Disp Ans
+Stop
+"B (θA θB A)"
+Lbl 4
+Input "θA=",D
+Input "θB=",E
+Input "A=",A
+C/sin(A)*sin(B)
 Disp Ans
 Stop
 
@@ -44,7 +49,7 @@ Lbl 6
 Input "A=",A
 Input "B=",B
 Input "C=",C
-"θC\->Ans"
+"θC=>Ans"
 cos⁻¹((C²-A²-B²)/(-2AB))
 sin(Ans)AB/2
 Disp Ans
@@ -62,9 +67,20 @@ Lbl 8
 Input "A=",A
 Input "θB=",E
 Input "θC=",F
-"θA\->Ans + B\->Ans"
+"θ=>Ans + B=>Ans"
 180-E-F
 A/sin(Ans)*sin(E)
+sin(F)AAns/2
+Disp Ans
+Stop
+"AREA (A θA θC)"
+Lbl 9
+Input "A=",A
+Input "θA=",D
+Input "θC=",F
+"θB=>Ans + B=>Ans"
+180-D-F
+A/sin(D)*sin(Ans)
 sin(F)AAns/2
 Disp Ans
 Stop
@@ -90,10 +106,72 @@ Lbl 13
 Input "A=",A
 Input "θB=",E
 Input "θC=",F
-"θA\->Ans + B\->Ans"
+"θA=>Ans + B=>Ans"
 180-E-F
 A/sin(Ans)*sin(E)
 A+Ans+√(A²+Ans²-2AAnscos(F))
 Disp Ans
 Stop
+"PER. (A θA θC)"
+Lbl 14
+Input "A=",A
+Input "θA=",D
+Input "θC=",F
+"θB=>Ans + B=>Ans"
+180-D-F
+A/sin(D)*sin(Ans)
+A+Ans+√(A²+Ans²-2AAnscos(F))
+Disp Ans
+Stop
+
+Lbl 16
+Input "A=",A
+Input "B=",B
+sin(A)cosh(B)+cos(A)sinh(B)[i]
+Disp Ans
+Stop
+Lbl 17
+Input "A=",A
+Input "B=",B
+cos(A)cosh(B)-sin(A)sinh(B)[i]
+Disp Ans
+Stop
+Lbl 18
+Input "A=",A
+Input "B=",B
+sin(2A)/(cos(2A)+cosh(2B))+sinh(2B)/(cos(2A)+cosh(2B))[i]
+Disp Ans
+Stop
+
+Lbl 21
+Input "A=",A
+Input "B=",B
+⁻iln(A[i]-B+√(1-(A+B[i])²)
+Disp Ans
+Stop
+Lbl 22
+Input "A=",A
+Input "B=",B
+π/2+iln(A[i]-B+√(1-(A+B[i])²))
+Disp Ans
+Stop
+Lbl 23
+Input "A=",A
+Input "B=",B
+[i]/2ln(1-[i]-B)-[i]/2ln(1+A[i]-B)
+Disp Ans
+Stop
+
+Lbl 26
+Input "AX=",A
+Input "AY=",D
+Input "BX=",B
+Input "BY=",E
+Input "CX=",C
+Input "CY=",F
+{√((B-A)²+(E-D)²),√((C-B)²+(F-E)²),√((A-C)²+(D-F)²)}
+cos⁻¹((Ans(3)²-Ans(2)²-Ans(1)²)/(⁻2Ans(2)Ans(3)))
+Disp Ans
+Stop
+
 Lbl 99

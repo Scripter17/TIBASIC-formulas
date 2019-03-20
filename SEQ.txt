@@ -10,85 +10,119 @@ Menu("SEQ (GEOM SUM)","BACK",10,"SN (A R N)",16,"A (SN R N)",17,"R (SN A N)",18,
 
 "TN (A D N)"
 Lbl 1
-Prompt A,D,N
+Input "A=",A
+Input "D=",D
+Input "N=",N
 Disp A+(N-1)D
 Stop
 "A (TN D N)"
 Lbl 2
-Prompt T,D,N
+Input "TN=",T
+Input "D=",D
+Input "N=",N
 Disp T-(N-1)D
 Stop
 "D (TN A N)"
 Lbl 3
-Prompt T,A,N
+Input "TN=",T
+Input "A=",A
+Input "N=",N
 Disp (T-A)/(N-1)
 Stop
 "N (TN A D)"
 Lbl 4
-Prompt T,A,D
+Input "TN=",T
+Input "D=",A
+Input "A=",D
 Disp (T-A)/D+1
 Stop
 
 "SN (A D N)"
 Lbl 6
 Prompt A,D,N
+Input "A=",A
+Input "D=",D
+Input "N=",N
 Disp N/2*(2A+(N-1)D)
 Stop
 "A (SN D N)"
 Lbl 7
-Prompt S,D,N
+Input "SN=",S
+Input "D=",D
+Input "N=",N
 Disp S/N-(N-1)D/2
 Stop
 "D (SN A N)"
 Lbl 8
-Prompt S,A,N
+Input "SN=",S
+Input "A=",A
+Input "N=",N
 Disp (2S/N-2A)/(N-1)
 Stop
 "N (SN A D)"
 Lbl 9
-Prompt S,A,D
+Input "SN=",S
+Input "A=",A
+Input "D=",D
 Disp (√(4A(A-D)+D(D+8S))-2A+D)/2D
 Stop
 
 "TN (A R N)"
 Lbl 11
-Prompt A,R,N
+Input "A=",A
+Input "R=",R
+Input "N=",N
 Disp AR^(N-1)
 Stop
 "A (TN R N)"
 Lbl 12
-Prompt T,R,N
+Input "TN=",T
+Input "R=",R
+Input "N=",N
 Disp T/(R^(N-1))
 Stop
 "R (TN A N)"
 Lbl 13
-Prompt T,A,N
+Input "TN=",T
+Input "A=",N
+Input "N=",A
 Disp (T/A)^(1/(N-1))
 Stop
 "N (TN A R)"
 Lbl 14
-Prompt T,A,R
+Input "TN=",T
+Input "A=",A
+Input "R=",R
 Disp logBASE(T/A,R)+1
 Stop
 
 "SN (A R N)"
 Lbl 16
-Prompt A,R,N
+Input "A=",A
+Input "R=",R
+Input "N=",N
 Disp A(R^N-1)/(R-1)
 Stop
 "A (SN R N)"
 Lbl 17
-Prompt S,R,N
+Input "SN=",S
+Input "R=",R
+Input "N=",N
 Disp S*(R-1)/(R^N-1)
 Stop
 "R (SN A N)"
 Lbl 18
-Prompt S,A,N
+Input "SN=",S
+Input "A=",A
+Input "N=",N
 Disp "IDFK"
 Stop
 "N (SN A R)"
 Lbl 19
-Prompt S,A,R
+Input "SN=",S
+Input "A=",A
+Input "R=",R
 Disp logBASE(S/A*(R-1)+1,R)
 Stop
+
 Lbl 99

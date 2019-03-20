@@ -1,14 +1,17 @@
 ClrHome
 Lbl 0
-Menu("QUAD (STD)","BACK",5,"SOLVE",1,"TO VERTEX",2,"NEXT",5,"EXIT",99)
+Menu("QUAD (STD)","BACK",10,"SOLVE",1,"TO VERTEX",2,"TO FACT",3,"NEXT",5,"EXIT",99)
 Lbl 5
-Menu("QUAD (VERTEX)","BACK",0,"SOLVE",6,"TO STD",7,"NEXT",0,"EXIT",99)
+Menu("QUAD (VERTEX)","BACK",0,"SOLVE",6,"TO STD",7,"TO FACT",8,"NEXT",10,"EXIT",99)
+Lbl 10
+Menu("QUAD (FACT)","BACK",5,"SOLVE",11,"TO STD",12,"TO VERTEX",13,"NEXT",0,"EXIT",99)
+
 Lbl 1
 Input "A=",A
 Input "B=",B
 Input "C=",C
 √(B²-4AC)
-{(-B+Ans)/(2A),(-B-Ans)/(2A)}
+{(⁻B+Ans)/(2A),(⁻B-Ans)/(2A)}
 Disp Ans(1)
 Disp Ans(2)
 Stop
@@ -16,11 +19,22 @@ Lbl 2
 Input "A=",A
 Input "B=",B
 Input "C=",C
-{A,⁻B/(2A),⁻B²/(4A)+C}
 Disp "Y=A(X-H)²+K"
+{A,⁻B/(2A),⁻B²/(4A)+C}
 Disp Ans(1)
 Disp Ans(2)
 Disp Ans(3)
+Stop
+Lbl 3
+Input "A=",A
+Input "B=",B
+Input "C=",C
+√(B²-4AC)
+{(⁻B+Ans)/(2A),(⁻B-Ans)/(2A)}
+Disp "Y=A(X-R1)(X-R2)"
+Disp A
+Disp Ans(1)
+Disp Ans(2)
 Stop
 
 Lbl 6
@@ -36,9 +50,50 @@ Lbl 7
 Input "A=",A
 Input "H=",B
 Input "K=",C
+Disp "Y=AX²+BX+C"
 {A,⁻2AB,AB²+C}
+Disp Ans(1)
+Disp Ans(2)
+Disp Ans(3)
+Stop
+Lbl 8
+Input "A=",A
+Input "H=",B
+Input "K=",C
+√((2AB)²-4A(AB²+C))
+{(2AB+Ans)/(2A),(2AB-Ans)/(2A)}
+Disp "Y=A(X-R1)(X-R2)"
+Disp A
+Disp Ans(1)
+Disp Ans(2)
+Stop
+
+Lbl 11
+Input "A=",A
+Input "R1=",B
+Input "R2=",C
+{B,C}
+Disp Ans(1)
+Disp Ans(2)
+Stop
+Lbl 12
+Input "A=",A
+Input "R1=",B
+Input "R2=",C
+{A,⁻BA-CA,ABC}
 Disp "Y=AX²+BX+C"
 Disp Ans(1)
 Disp Ans(2)
 Disp Ans(3)
+Stop
+Lbl 13
+Input "A=",A
+Input "R1=",B
+Input "R2=",C
+(B+C)/2
+{Ans,A((⁻B²-C²+2BC)/4)}
+Disp "Y=A(X-H)²+K"
+Disp Ans(1)
+Disp Ans(2)
+Stop
 Lbl 99
