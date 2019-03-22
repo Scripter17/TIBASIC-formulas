@@ -1,0 +1,10 @@
+If Ans=1
+Then
+Goto 1
+End
+Goto 99
+Lbl 1
+√(ʟJA(1)²+ʟJA(2)²-2ʟJA(1)ʟJA(2)cos(ʟJA(3)))
+Stop
+
+Lbl 99
