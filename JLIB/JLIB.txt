@@ -1,10 +1,28 @@
-If Ans=1
-Then
+"EXPERIMENTAL TIBASIC LIBRARY THING
+Ans→ʟJA
+If ʟJA(1)=1:Then
 Goto 1
+Else:If ʟJA(1)=2:Then
+Goto 2
+Else:If ʟJA(1)=3:Then
+Goto 3
+Else:If ʟJA(1)=4:Then
+Goto 4
 End
 Goto 99
+
+
 Lbl 1
-√(ʟJA(1)²+ʟJA(2)²-2ʟJA(1)ʟJA(2)cos(ʟJA(3)))
+√(ʟJA(2)²+ʟJA(3)²-2ʟJA(2)ʟJA(3)cos(ʟJA(4)))
+Stop
+Lbl 2
+cos⁻¹(⁻(ʟJA(4)-ʟJA(3)-ʟJA(2))/(2ʟJA(2)ʟJA(3)))
+Stop
+Lbl 3
+sin⁻¹(sin(ʟJA(2))/ʟJA(3)*ʟJA(4))
+Stop
+Lbl 4
+ʟJA(2)/sin(ʟJA(3))*sin(ʟJA(4))
 Stop
 
 Lbl 99
