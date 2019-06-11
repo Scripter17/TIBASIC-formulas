@@ -1,27 +1,27 @@
 Lbl A
 "Ω=V/A=W/A²=V²/W=JS/C²=J/SA²
-Menu("CIRCT (Ω)","Ω(VA)",0,"Ω(WA)",1,"Ω(VW)",2,"Ω(JSC)",3,"Ω(JSA)",4,"NEXT",B,"EXIT",99)
+Menu("CIRCT (Ω)","VA",0,"WA",1,"VW",2,"JSC",3,"JSA",4,"NEXT",B,"EXIT",99)
 Lbl B
 "V=ΩA=WA=J/(SA)
-Menu("CIRCT (V)","V(ΩA)",5,"V(WA)",6,"V(JSA)",7,"NEXT",C,"EXIT",99)
+Menu("CIRCT (V)","ΩA",5,"WA",6,"JSA",7,"",99,"",99,"NEXT",C,"EXIT",99)
 Lbl C
 "A=V/Ω=√(W/Ω)=W/B=C²V/(SJ)=VSA²/J
-Menu("CIRCT (A)","A(VΩ)",10,"A(WΩ)",11,"A(WV)",12,"A(CVSJ)",13,"A(VSAJ)",14,"NEXT",D,"EXIT",99)
+Menu("CIRCT (A)","VΩ",10,"WΩ",11,"WV",12,"CVSJ",13,"VSAJ",14,"NEXT",D,"EXIT",99)
 Lbl D
 "W=ΩA²=VA=J/S
-Menu("CIRCT (W)","W(ΩA)",15,"W(VA)",16,"W(JS)",17,"NEXT",E,"EXIT",99)
+Menu("CIRCT (W)","ΩA",15,"VA",16,"JS",17,"",99,"",99,"NEXT",E,"EXIT",99)
 Lbl E
 "J=ΩC²/S=WC²/(AS)=WC²/(A²S)=V²C²/(WS)
-Menu("CIRCT (J)","ΩCS",20,"WCAS",21,"VCWS",22,"NEXT",F,"EXIT",99)
+Menu("CIRCT (J)","ΩCS",20,"WCAS",21,"VCWS",22,"",99,"",99,"NEXT",F,"EXIT",99)
 Lbl F
 "C=√(JS/Ω)=√(A²JS/W)=√(WJS/V²)=SA
-Menu("CIRCT (C)","JSΩ",25,"AJSW",26,"WJSV",27,"SA",28,"NEXT",G,"EXIT",99)
+Menu("CIRCT (C)","JSΩ",25,"AJSW",26,"WJSV",27,"SA",28,"",99,"NEXT",G,"EXIT",99)
 Lbl G
 "P: I0=I1+I2+… V0=V1=V2=… R0ˉ¹=R1ˉ¹+R2ˉ¹+…
-Menu("CIRCT (=)","I0=I1+…",30,"V0=V1=…",31,"R0ˉ¹=R1ˉ¹+…",32,"NEXT",H,"EXIT",99)
+Menu("CIRCT (=)","I0=I1+…",30,"V0=V1=…",31,"R0ˉ¹=R1ˉ¹+…",32,"",99,"",99,"NEXT",H,"EXIT",99)
 Lbl H
 "S: I0=I1=I2=… V0=V1+V2+… R0=R1+R2
-Menu("CIRCT (--)","I0=I1=…",35,"V0=V1+…",36,"R0=R1+…",37,"NEXT",A,"EXIT",99)
+Menu("CIRCT (--)","I0=I1=…",35,"V0=V1+…",36,"R0=R1+…",37,"",99,"",99,"NEXT",A,"EXIT",99)
 
 Lbl 0
 Input "V=",V
