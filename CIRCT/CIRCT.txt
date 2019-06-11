@@ -156,11 +156,6 @@ V²C²/(WS)
 Disp Ans
 Stop
 
-
-Lbl F
-"C=√(JS/Ω)=√(A²JS/W)=√(WJS/V²)=SA
-Menu("CIRCT (C)","JSΩ",25,"AJSW",26,"WJSV",27,"SA",28,"NEXT",G,"EXIT",99)
-
 Lbl 25
 Input "J=",J
 Input "S=",S
@@ -181,16 +176,38 @@ Input "W=",W
 Input "J=",J
 Input "S=",S
 Input "V=",V
-√()
+√(WJS/V²)
+Disp Ans
+Stop
+Lbl 28
+Input "S=",S
+Input "A=",A
+SA
+Disp Ans
+Stop
 
-Lbl G
-"P: I0=I1+I2+… V0=V1=V2=… R0ˉ¹=R1ˉ¹+R2ˉ¹+…
-Menu("CIRCT (=)","I0=I1+…",30,"V0=V1=…",31,"R0ˉ¹=R1ˉ¹+…",32,"NEXT",H,"EXIT",99)
+Lbl 30
+sum(L₁)
+Disp Ans
+Stop
+Lbl 31
+Stop
+Lbl 32
+L₃ˉ¹
+sum(Ans)
+Ansˉ¹
+Disp Ans
+Stop
 
-
-Lbl H
-"S: I0=I1=I2=… V0=V1+V2+… R0=R1+R2
-Menu("CIRCT (--)","I0=I1=…",35,"V0=V1+…",36,"R0=R1+…",37,"NEXT",A,"EXIT",99)
-
+Lbl 35
+Stop
+Lbl 36
+sum(L₂)
+Disp Ans
+Stop
+Lbl 37
+sum(L₃)
+Disp Ans
+Stop
 
 Lbl 99
