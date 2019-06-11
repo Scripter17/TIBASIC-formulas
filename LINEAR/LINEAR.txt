@@ -25,9 +25,9 @@ Lbl 2
 Input "M1=",A
 Input "X1=",B
 Input "Y1=",C
-Input "M1=",D
-Input "X1=",E
-Input "Y1=",F
+Input "M2=",D
+Input "X2=",E
+Input "Y2=",F
 (F-C+AB-CD)/(A-D)
 {Ans,A(Ans-B)+C}
 Disp Ans(1)

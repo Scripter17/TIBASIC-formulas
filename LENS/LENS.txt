@@ -1,62 +1,65 @@
 "1/F=1/DO+1/DI
-"M=HI/HO=⁻I/DO
+"M=HI/HO=⁻DI/DO
 ClrHome
 Lbl 0
-Menu("LENS (1)","BACK",5,"F (DO DI)",1,"DI (F DO)",2,"DO (F DI)",3,"HO (M HI)",4,"NEXT",15,"EXIT",99)
+Menu("LENS (1)","BACK",10,"F (DO DI)",1,"DI (F DO)",2,"DO (F DI)",3,"NEXT",15,"EXIT",99)
 Lbl 5
-Menu("LENS (2)","BACK",0,"HI (M HO)",6,"DO (M DI)",7,"DI (M DO)",8,"M (HI HO)",9,"NEXT",10,"EXIT",99)
+Menu("LENS (2)","BACK",0,"HI (M HO)",6,"HO (M HI)",7,"DI (M DO)",8,"DO (M DI)",9,"NEXT",10,"EXIT",99)
 Lbl 10
-Menu("LENS (3)","BACK",5,"M (DI DO)",11,"NEXT",0,"EXIT",99)
-Lbl 50
-Disp "F=FOCUS LEN"
-Disp "M=MAGNIFICATION"
-Disp "DI/O=IM/OBJ DIST"
-Disp "HI/O=IM/OBJ HIGH"
-Disp "F=(DIˉ¹ + DOˉ¹)ˉ¹
-Disp "M=HI/HO=⁻DI/DO
-Stop
+Menu("LENS (3)","BACK",5,"M (HI HO)",11,"M (DI DO)",12,"NEXT",0,"EXIT",99)
+
+"F (DO DI)"
 Lbl 1
 Input "DO:",O
 Input "DI:",I
 Disp 1/(1/O+1/I)
 Stop
+"DI (F DO)"
 Lbl 2
 Input " F:",F
 Input "DO:",O
 Disp 1/(1/F-1/O)
 Stop
+"DO (F DI)"
 Lbl 3
 Input " F:",F
 Input "DO:",O
 Disp 1/(1/F-1/O)
 Stop
-Lbl 4
-Input " M:",M
-Input "HI:",I
-Disp I/M
-Stop
 
+"HI (M HO)"
 Lbl 6
 Input " M:",M
 Input "HO:",O
 Disp M*O
 Stop
+"HO (M HI)"
 Lbl 7
 Input " M:",M
-Input "DI:",I
-Disp ⁻I/M
+Input "HI:",I
+Disp I/M
 Stop
+"DI (M DO)"
 Lbl 8
 Input " M:",M
 Input "DO:",O
 Disp ⁻M*O
 Stop
+"DO (M DI)"
 Lbl 9
+Input " M:",M
+Input "DI:",I
+Disp ⁻I/M
+Stop
+
+"M (HI HO)"
+Lbl 11
 Input "HI:",I
 Input "HO:",O
 Disp I/O
 Stop
-Lbl 11
+"M (DI DO)"
+Lbl 12
 Input "DI:",I
 Input "DO:",O
 Disp ⁻I,O

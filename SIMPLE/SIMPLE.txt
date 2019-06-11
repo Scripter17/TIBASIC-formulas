@@ -1,0 +1,11 @@
+Lbl 0
+Menu("SMAC","RAMP",1,"PULLEY",2,"LEVER",3,"EXIT",99)
+Lbl 1
+prgmSMRAMP
+Goto 99
+Lbl 2
+prgmSMPULL
+Goto 99
+Lbl 3
+prgmSMLEVER
+Goto 99

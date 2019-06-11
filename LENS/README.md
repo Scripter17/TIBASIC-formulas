@@ -12,6 +12,15 @@ Calculator for lenses. (Focus, magnification, image/object distance, etc.)
 
 ### Formulas
 
-- Calculate F, DI, and DO given the other two
-- Calculate M, HI, and HO given the other two
-- Calculate M, DI, and DO given the other two
+- **Page 1** (F DI DO)
+ - F given DI and DO
+ - DI given F and DO
+ - DO given F and DI
+- **Page 2** (HI HO DI DO M)
+ - HI given M and HO
+ - HO given M and HI
+ - DI given M and DO
+ - DO given M and DI
+- **Page 3** (HI HO DI DO M)
+ - M given HI and HO
+ - M given DI and DO

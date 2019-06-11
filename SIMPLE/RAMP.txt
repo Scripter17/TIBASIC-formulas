@@ -1,0 +1,55 @@
+Lbl 0
+Menu("SMRAMP (1)","BACK",5,"IMA (W H)",1,"AMA (M FG FA)",2,"WI (FA H IMA)",3,"WO (M G H)",4,"NEXT",5,"EXIT",99)
+Lbl 5
+Menu("SMRAMP (2)","BACK",0,"E (WI WO)",6,"FF (FA E)",7,"ALL (W H M F G)",8,"BACK",0,"EXIT",99)
+Lbl 1
+Input "W=",W
+Input "H=",H
+W/H
+Disp Ans
+Stop
+Lbl 2
+Input "M=",M
+Input "FG=",G
+Input "FA=",A
+M*G/A
+Disp Ans
+Stop
+Lbl 3
+Input "FA=",A
+Input "H=",H
+Input "IMA=",I
+A*H*I
+Disp Ans
+Stop
+Lbl 4
+Input "M=",M
+Input "G=",G
+Input "H=",H
+M*G*H
+Disp Ans
+Stop
+
+Lbl 6
+Input "WI=",I
+Input "WO=",O
+O/I
+Disp Ans
+Stop
+Lbl 7
+Disp "FA=",A
+Disp "E=",E
+A*(1-E)
+Disp Ans
+Stop
+Lbl 8
+Input "W=",W
+Input "H=",H
+Input "M=",M
+Input "F=",F
+Input "G=",G
+W/H→A
+M
+Stop
+
+Lbl 99

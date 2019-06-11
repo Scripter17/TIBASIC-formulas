@@ -1,0 +1,15 @@
+L₁(1)→F
+DeltaList(cumSum(L₁))→ʟML
+{0}→ʟR
+For(I,1,dim(ʟML)-1)
+ʟML→ʟM
+For(J,1,I-1)
+DeltaList(cumSum(ʟM))→ʟM
+End
+sum(DeltaList(cumSum(ʟM)))→M
+F/sum(ʟM)→A
+M*A→F
+augment(ʟR,{F})→ʟR
+End
+DeltaList(cumSum(ʟR))→ʟR
+Disp ʟR

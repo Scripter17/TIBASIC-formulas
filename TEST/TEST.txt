@@ -1,0 +1,8 @@
+"M1C1ΔT1=-M2C2ΔT2"
+ClrHome
+Output(1,1,"M1 =")
+Output(2,1,"C1 =")
+Output(3,1,"ΔT1=")
+Output(4,1,"M2 =")
+Output(5,1,"C2 =")
+Output(6,1,"ΔT2=")

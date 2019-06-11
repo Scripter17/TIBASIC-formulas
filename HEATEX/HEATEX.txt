@@ -1,0 +1,20 @@
+"M1C1ΔT1=-M2C2ΔT2"
+"M=MASS
+"C=HEAT CAP.
+"ΔT=CHANGE IN TEMP
+"TS=START TEMP
+"TF=END TEMP
+
+Lbl 0
+Menu("HEATEX (1)","BACK",0,"TF (Q1S Q2S)",1,"NEXT",0,"EXIT",99)
+
+Lbl 1
+Input "M1=",A
+Input "C1=",B
+Input "TS1=",C
+Input "M2=",D
+Input "C2=",E
+Input "TS2=",F
+(ABC+DEF)/(AB+DE)
+Disp Ans
+Lbl 99

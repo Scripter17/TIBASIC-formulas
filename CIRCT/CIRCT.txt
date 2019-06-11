@@ -1,0 +1,196 @@
+Lbl A
+"Ω=V/A=W/A²=V²/W=JS/C²=J/SA²
+Menu("CIRCT (Ω)","Ω(VA)",0,"Ω(WA)",1,"Ω(VW)",2,"Ω(JSC)",3,"Ω(JSA)",4,"NEXT",B,"EXIT",99)
+Lbl B
+"V=ΩA=WA=J/(SA)
+Menu("CIRCT (V)","V(ΩA)",5,"V(WA)",6,"V(JSA)",7,"NEXT",C,"EXIT",99)
+Lbl C
+"A=V/Ω=√(W/Ω)=W/B=C²V/(SJ)=VSA²/J
+Menu("CIRCT (A)","A(VΩ)",10,"A(WΩ)",11,"A(WV)",12,"A(CVSJ)",13,"A(VSAJ)",14,"NEXT",D,"EXIT",99)
+Lbl D
+"W=ΩA²=VA=J/S
+Menu("CIRCT (W)","W(ΩA)",15,"W(VA)",16,"W(JS)",17,"NEXT",E,"EXIT",99)
+Lbl E
+"J=ΩC²/S=WC²/(AS)=WC²/(A²S)=V²C²/(WS)
+Menu("CIRCT (J)","ΩCS",20,"WCAS",21,"VCWS",22,"NEXT",F,"EXIT",99)
+Lbl F
+"C=√(JS/Ω)=√(A²JS/W)=√(WJS/V²)=SA
+Menu("CIRCT (C)","JSΩ",25,"AJSW",26,"WJSV",27,"SA",28,"NEXT",G,"EXIT",99)
+Lbl G
+"P: I0=I1+I2+… V0=V1=V2=… R0ˉ¹=R1ˉ¹+R2ˉ¹+…
+Menu("CIRCT (=)","I0=I1+…",30,"V0=V1=…",31,"R0ˉ¹=R1ˉ¹+…",32,"NEXT",H,"EXIT",99)
+Lbl H
+"S: I0=I1=I2=… V0=V1+V2+… R0=R1+R2
+Menu("CIRCT (--)","I0=I1=…",35,"V0=V1+…",36,"R0=R1+…",37,"NEXT",A,"EXIT",99)
+
+Lbl 0
+Input "V=",V
+Input "A=",A
+V/A
+Disp Ans
+Stop
+Lbl 1
+Input "W=",W
+Input "A=",A
+W/(A²)
+Disp Ans
+Stop
+Lbl 2 
+Input "V=",V
+Input "W=",W
+V²/W
+Disp Ans
+Stop
+Lbl 3
+Input "J=",J
+Input "S=",S
+Input "C=",C
+JS/(C²)
+Disp Ans
+Stop
+Lbl 4
+Input "J=",J
+Input "S=",S
+Input "A=",A
+J/(SA²)
+Disp Ans
+Stop
+
+
+
+Lbl 5
+Input "Ω=",O
+Input "A=",A
+OA
+Disp Ans
+Stop
+Lbl 6
+Input "W=",W
+Input "A=",A
+W/A
+Disp Ans
+Stop
+Lbl 7
+Input "J=",J
+Input "S=",S
+Input "A=",A
+J/(SA)
+Disp Ans
+Stop
+
+Lbl 10
+Input "V=",V
+Input "Ω=",O
+V/O
+Disp Ans
+Stop
+Lbl 11
+Input "W=",W
+Input "Ω=",O
+√(W/O)
+Disp Ans
+Stop
+Lbl 12
+Input "W=",W
+Input "V=",V
+W/V
+Disp Ans
+Stop
+Lbl 13
+Input "C=",C
+Input "V=",V
+Input "S=",S
+Input "J=",J
+C²V/(SJ)
+Disp Ans
+Stop
+Lbl 14
+Input "V=",V
+Input "S=",S
+Input "A=",A
+Input "J=",J
+VSA²/J
+Disp Ans
+Stop
+
+Lbl 15
+Input "Ω=",O
+Input "A=",A
+OA²
+Disp Ans
+Stop
+Lbl 16
+Input "V=",V
+Input "A=",A
+VA
+Disp Ans
+Stop
+Lbl 17
+Input "J=",J
+Input "S=",S
+J/S
+Disp Ans
+Stop
+
+Lbl 20
+Input "Ω=",O
+Input "C=",C
+Input "S=",S
+OC²/S
+Disp Ans
+Stop
+Lbl 21
+Input "W=",W
+Input "C=",C
+Input "A=",A
+Input "S=",S
+WC²/(A²S)
+Disp Ans
+Stop
+Lbl 22
+Input "V=",V
+Input "C=",C
+Input "W=",W
+Input "S=",S
+V²C²/(WS)
+Disp Ans
+Stop
+
+
+Lbl F
+"C=√(JS/Ω)=√(A²JS/W)=√(WJS/V²)=SA
+Menu("CIRCT (C)","JSΩ",25,"AJSW",26,"WJSV",27,"SA",28,"NEXT",G,"EXIT",99)
+
+Lbl 25
+Input "J=",J
+Input "S=",S
+Input "Ω=",O
+√(JS/O)
+Disp Ans
+Stop
+Lbl 26
+Input "A=",A
+Input "J=",J
+Input "S=",S
+Input "W=",W
+√(A²JS/W)
+Disp Ans
+Stop
+Lbl 27
+Input "W=",W
+Input "J=",J
+Input "S=",S
+Input "V=",V
+√()
+
+Lbl G
+"P: I0=I1+I2+… V0=V1=V2=… R0ˉ¹=R1ˉ¹+R2ˉ¹+…
+Menu("CIRCT (=)","I0=I1+…",30,"V0=V1=…",31,"R0ˉ¹=R1ˉ¹+…",32,"NEXT",H,"EXIT",99)
+
+
+Lbl H
+"S: I0=I1=I2=… V0=V1+V2+… R0=R1+R2
+Menu("CIRCT (--)","I0=I1=…",35,"V0=V1+…",36,"R0=R1+…",37,"NEXT",A,"EXIT",99)
+
+
+Lbl 99
