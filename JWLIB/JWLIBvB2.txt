@@ -1,0 +1,178 @@
+Ans→ʟJW
+
+"JWLIB
+"Made by James Wise
+"2019-11-02 to 2019-11-04
+"Beta v2
+
+"In :Ans - {command,arg1,arg2,…}
+"Res:ʟJW ʟJWP
+"Out:Ans - output
+
+"TODO: Easliy allow variable program names
+
+If 10≤abs(ʟJW(1)) and abs(ʟJW(1))≤15:Then
+If dim(ʟJW)=2:Then
+3→dim(ʟJW)
+imag(ʟJW(2))→ʟJW(3)
+real(ʟJW(2))→ʟJW(2)
+End
+"Behold! The peak of TI-BASIC BS!
+"The hyperbolic trig functions ignore the degree or radian setting!
+"I have to convert ʟJW(2) and ʟJW(3) to radians and put them at the end for sinh and cosh!
+5→dim(ʟJW)
+If 1°=1:Then
+ʟJW(2)/180*π→ʟJW(4)
+ʟJW(3)/180*π→ʟJW(5)
+Else
+ʟJW(2)→ʟJW(4)
+ʟJW(3)→ʟJW(5)
+End
+"If this line isn't here, it breaks???
+real(ʟJW)→ʟJW
+End
+
+If real(ʟJW(1))<0:Then
+"Inverse function group, just to speed it up a bit
+Goto IF
+End
+
+If real(ʟJW(1))=1:Then
+"=
+ʟJW(2)+0[i]=ʟJW(3)+0[i]
+End
+If real(ʟJW(1))=2:Then
+">
+If imag(ʟJW(2))=0 and imag(ʟJW(3))=0:Then
+real(ʟJW(2))>real(ʟJW(3))
+Else:0:End
+End
+If real(ʟJW(1))=3:Then
+"<
+If imag(ʟJW(2))=0 and imag(ʟJW(3))=0:Then
+real(ʟJW(2))<real(ʟJW(3))
+Else:0:End
+End
+If real(ʟJW(1))=4:Then
+"Approx
+abs(abs(ʟJW(2))-abs(ʟJW(3)))≤abs(imag(ʟJW(1)))
+End
+
+If real(ʟJW(1))=10:Then
+"sin(A+B[i])
+"{10,A+B[i]} or {10,A,B} (same for all 10≤abs(c)≤15)
+sin(ʟJW(2))cosh(ʟJW(5))+cos(ʟJW(2))sinh(ʟJW(5))[i]
+End
+If real(ʟJW(1))=11:Then
+"cos(A+B[i])
+cos(ʟJW(2))cosh(ʟJW(5))-sin(ʟJW(2))sinh(ʟJW(5))[i]
+End
+If real(ʟJW(1))=12:Then
+"tan(A+B[i])
+sin(2ʟJW(2))/(cos(2ʟJW(2))+cosh(2ʟJW(5)))+sinh(2ʟJW(5))/(cos(2ʟJW(2))+cosh(2ʟJW(5)))[i]
+End
+If real(ʟJW(1))=13:Then
+"sinh(A+B[i])
+sinh(ʟJW(4))cos(ʟJW(3))+cosh(ʟJW(4))sin(ʟJW(3))[i]
+End
+If real(ʟJW(1))=14:Then
+"cosh(A+B[i])
+cosh(ʟJW(4))cos(ʟJW(3))+sinh(ʟJW(4))sin(ʟJW(3))[i]
+End
+If real(ʟJW(1))=15:Then
+"tanh(A+B[i])
+sinh(2ʟJW(4))/(cosh(2ʟJW(4))+cos(2ʟJW(3)))+sin(2ʟJW(3))/(cosh(2ʟJW(4))+cos(2ʟJW(3)))[i]
+End
+
+If real(ʟJW(1))=16:Then
+"b=a/sin(A)*sin(B)
+"{16,a,A,B}
+ʟJW→ʟJWP
+{10,ʟJWP(3)}:prgmJWLIB:Ans→ʟJWP(3)
+{10,ʟJWP(4)}:prgmJWLIB:Ans→ʟJWP(4)
+ʟJWP(2)/ʟJWP(3)*ʟJWP(4)
+End
+If real(ʟJW(1))=17:Then
+"c=√(a²+b²-2abcos(C))
+"{18,a,b,C}
+ʟJW→ʟJWP
+{11,ʟJWP(4)}:prgmJWLIB
+√(ʟJWP(2)²+ʟJWP(3)²-2ʟJWP(2)ʟJWP(3)Ans)
+End
+Goto EF
+
+Lbl IF
+
+If real(ʟJW(1))=⁻1:Then
+"≠
+ʟJW(2)+0[i]≠ʟJW(3)+0[i]
+End
+If real(ʟJW(1))=⁻2:Then
+"≤
+If imag(ʟJW(2))=0 and imag(ʟJW(3))=0:Then
+real(ʟJW(2))≤real(ʟJW(3))
+Else:0:End
+End
+If real(ʟJW(1))=⁻3:Then
+"≥
+If imag(ʟJW(2))=0 and imag(ʟJW(3))=0:Then
+real(ʟJW(2))≥real(ʟJW(3))
+Else:0:End
+End
+If real(ʟJW(1))=⁻4:Then
+"Signed Approx
+"C=⁻4+3[i] means abs(B)-abs(A)≤3
+"C=⁻4-3[i] means abs(B)-abs(A)≥⁻3
+abs(ʟJW(3))-abs(ʟJW(2))
+If (imag(ʟJW(1))<0 and Ans<0) or (imag(ʟJW(1))>0 and Ans>0) or (imag(ʟJW(1))=0 and Ans=0):Then
+abs(Ans)≤abs(imag(ʟJW(1)))
+Else
+0
+End
+End
+
+If real(ʟJW(1))=⁻10:Then
+"sin⁻¹(A+B[i])
+⁻[i]ln(ʟJW(2)[i]-ʟJW(3)+√(1-(ʟJW(2)+ʟJW(3)[i])²))
+End
+If real(ʟJW(1))=⁻11:Then
+"cos⁻¹(A+B[i])
+π/2+[i]ln(ʟJW(2)[i]-ʟJW(3)+√(1-(ʟJW(2)+ʟJW(3)[i])²))
+End
+If real(ʟJW(1))=⁻12:Then
+"tan⁻¹(A+B[i])
+[i]/2*(ln(1-ʟJW(2)[i]+ʟJW(3))-ln(1+ʟJW(2)[i]-ʟJW(3)))
+End
+If real(ʟJW(1))=⁻13:Then
+"sinh⁻¹(A+B[i])
+ln(√(1+(ʟJW(2)+ʟJW(3)[i])²)+ʟJW(2)+ʟJW(3)[i])
+End
+If real(ʟJW(1))=⁻14:Then
+"soch⁻¹(A+B[i])
+ln(√(ʟJW(2)+ʟJW(3)[i]-1)√(ʟJW(2)+ʟJW(3)[i]+1)+ʟJW(2)+ʟJW(3)[i])
+End
+If real(ʟJW(1))=⁻15:Then
+"tanh⁻¹(A+B[i])
+1/2*(ln(ʟJW(2)+ʟJW(3)[i]+1)-ln(⁻ʟJW(2)-ʟJW(3)[i]+1))
+End
+
+If real(ʟJW(1))=⁻16:Then
+"B=sin⁻¹(sin(A)/a*b)
+"{⁻16,A,a,b}
+ʟJW→ʟJWP
+{10,ʟJWP(2)}:prgmJWLIB:Ans→ʟJWP(2)
+{⁻10,ʟJWP(2)/ʟJWP(3)*ʟJWP(4)}:prgmJWLIB
+End
+If real(ʟJW(1))=⁻17:Then
+"C=cos⁻¹((c²-a²-b²)/(⁻2ab))
+"{⁻17,a,b,c}
+ʟJW→ʟJWP
+{⁻11,(ʟJWP(4)²-ʟJWP(2)²-ʟJWP(3)²)/(⁻2ʟJWP(2)ʟJWP(3))}
+Disp Ans
+prgmJWLIB
+End
+
+If ⁻17≤real(ʟJW(1)) and real(ʟJW(1))≤⁻10 and 1°=1:Then
+Ans/π*180
+End
+Lbl EF

@@ -1,0 +1,51 @@
+Goto SS
+Disp "ABORT!"
+1+[i]→A
+[[0]]→[A]
+{6,8}→dim([A])
+For(I,10,15)
+Radian
+{I,A}:prgmJWLIB:Ans→B
+real(B)→[A](I-9,1)
+imag(B)→[A](I-9,2)
+Degree
+{I,A}:prgmJWLIB:Ans→B
+real(B)→[A](I-9,3)
+imag(B)→[A](I-9,4)
+Radian
+{⁻I,A}:prgmJWLIB:Ans→B
+real(B)→[A](I-9,5)
+imag(B)→[A](I-9,6)
+Degree
+{⁻I,A}:prgmJWLIB:Ans→B
+real(B)→[A](I-9,7)
+imag(B)→[A](I-9,8)
+End
+Lbl SS
+Goto SA
+"{⁻4+2[i],1,1+[i]}:prgmJWLIB:Disp Ans
+"{⁻4-2[i],1+[i],1}:prgmJWLIB:Disp Ans
+"{⁻4+2[i],1+[i],1}:prgmJWLIB:Disp Ans
+"{⁻4-3[i],3,2}:prgmJWLIB:Disp Ans
+"{1,1+0[i],1}:prgmJWLIB:Disp Ans
+For(X,⁻4,4)
+Disp X
+{0,X}
+prgmJWLIB
+Pause 
+End
+Disp "-"
+For(X,10,17)
+Disp X
+{0,X}
+prgmJWLIB
+Pause 
+End
+Lbl SA
+Disp "-"
+For(X,⁻17,⁻10)
+Disp X
+{0,X}
+prgmJWLIB
+Pause 
+End
