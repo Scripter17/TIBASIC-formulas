@@ -1,5 +1,5 @@
-Goto SS
-Disp "ABORT!"
+Menu("Test","Trig",10,"Linear",20,"Exit",99)
+Lbl 10
 1+[i]→A
 [[0]]→[A]
 {6,8}→dim([A])
@@ -21,8 +21,6 @@ Degree
 real(B)→[A](I-9,7)
 imag(B)→[A](I-9,8)
 End
-Lbl SS
-Goto SA
 "{⁻4+2[i],1,1+[i]}:prgmJWLIB:Disp Ans
 "{⁻4-2[i],1+[i],1}:prgmJWLIB:Disp Ans
 "{⁻4+2[i],1+[i],1}:prgmJWLIB:Disp Ans
@@ -41,7 +39,6 @@ Disp X
 prgmJWLIB
 Pause 
 End
-Lbl SA
 Disp "-"
 For(X,⁻17,⁻10)
 Disp X
@@ -49,3 +46,9 @@ Disp X
 prgmJWLIB
 Pause 
 End
+Lbl 20
+{20,1,2,1,2,3}
+prgmJWLIB
+Disp Ans(1)
+Disp Ans(2)
+Lbl 99
